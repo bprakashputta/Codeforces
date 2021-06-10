@@ -10,8 +10,9 @@ using namespace std;
 int stoneGame(vector<int> arr, int n){
     int l = 0, r = n-1;
     int lval = 1, rval = *max_element(arr.begin(), arr.end());
+    // cout << "rval : "<<rval <<endl;
     bool lf = false, ri = false, rep = true;
-    while(l<r){
+    while(l+1<r){
         if(arr[l]==lval){
             l++;
             lf=true;
@@ -30,7 +31,7 @@ int stoneGame(vector<int> arr, int n){
             }
         }
     }
-    cout<<"l-"<<l<<" r-"<<r<<endl;
+    // cout<<"l-"<<l<<" r-"<<r<<endl;
 return r-l+1;
 }
 
